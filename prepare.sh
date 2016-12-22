@@ -32,5 +32,13 @@ else
 fi
 
 echo "安装Git hook"
+if [ -d "../.git/hooks" ]; then
+	echo "检测到hooks文件夹"
+else
+	mkdir ../.git/hooks
+fi
+
+echo "下载pre-commit文件"
 curl https://gist.githubusercontent.com/zangqilong198812/20075e94ee2a070060465d1f9bb68ae6/raw/e42cc8a9a7eb86f29ab423fb4b2fb516b50c3a71/gistfile1.txt > ../.git/hooks/pre-commit
 chmod a+x ../.git/hooks/pre-commit
+
