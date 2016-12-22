@@ -3,8 +3,11 @@
 ## 安装  
 只需要在项目根目录运行。
 `git clone git@github.com:zangqilong198812/InitializeAppShell.git`  
-`cd InitializeAppShell`
+
+`cd InitializeAppShell`  
+
 `sh prepare.sh`  
+
 即可
 
 ## 卸载  
