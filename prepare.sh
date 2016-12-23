@@ -15,7 +15,7 @@ showMenu() {
 	echo "2. 安装clang-format"
 	echo "3. 添加gitattributes防止pbxproj conflict"
 	echo "4. 安装gitflow"
-	echo "5. 安装commit hook"
+	echo "5. 安装commit hook自动规范代码（需要先安装clang-format）"
 	echo "================================================================="
 	read -p "输入编号：" number
 
