@@ -16,6 +16,7 @@ showMenu() {
 	echo "3. 添加gitattributes防止pbxproj conflict"
 	echo "4. 安装gitflow"
 	echo "5. 安装commit hook自动规范代码（需要先安装clang-format）"
+	echo "6. 安装chisel"
 	echo "================================================================="
 	read -p "输入编号：" number
 
@@ -29,6 +30,8 @@ showMenu() {
 		4) installGitflow
 		;;
 		5) installCommithook
+		;;
+		6) installChisel
 		;;
 	esac
 }
@@ -80,6 +83,11 @@ installGitflow() {
 	fi
 }
 
+installChisel() {
+	brew update
+	brew install chisel
+	echo "command script import /path/to/fblldb.py" > ~/.lldbinit
+}
 
 showMenu
 
