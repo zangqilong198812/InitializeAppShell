@@ -22,7 +22,7 @@
 6. cocoapods 这个不用介绍了吧
 7. carthage 同上
 8. clang-format 一个格式化代码的命令行工具 [文档介绍](http://clang.llvm.org/docs/ClangFormat.html)
-9. clang-format的格式文件，比如你希望拥有什么样的格式 [说明](clangformat.com)
+9. clang-format的格式文件，比如你希望拥有什么样的格式 [说明](www.clangformat.com)
 10. 一种避免iOS项目merge时候的pbxproj冲突的方法 [介绍](http://roadfiresoftware.com/2015/09/automatically-resolving-git-merge-conflicts-in-xcodes-project-pbxproj/)
 11. 往项目的`.git/hooks`文件夹添加一个pre-commit文件，用来在用户git commit之后做代码的格式化 [git hook介绍](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)
 12. Objective-C项目的ignore文件
