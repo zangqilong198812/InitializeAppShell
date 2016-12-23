@@ -140,6 +140,7 @@ installOCGitignore() {
 	read -p "项目的根目录地址是：" address
 	echo "下载Objective-C .gitignore文件"
 	curl https://gist.githubusercontent.com/zangqilong198812/d69b70613739a4e1ec3d20ad5f4a9cbe/raw/fca741cfa83736e64b3fed0819de5e8098286704/gistfile1.txt > $address/.gitignore
+	cd $address
 	git rm -r --cached .
 	git add .
 	git commit -m "Add Objective-C gitignore"
@@ -149,6 +150,7 @@ installSwiftGitignore() {
 	read -p "项目的根目录地址是：" address
 	echo "下载Swift .gitignore文件"
 	curl https://gist.githubusercontent.com/zangqilong198812/2b87d03ec7d60cf2a1d95fc0dc34ad58/raw/8261ccb13359156f4510dfccc3a44e0d7bba0902/gistfile1.txt > $address/.gitignore
+	cd $address
 	git rm -r --cached .
 	git add .
 	git commit -m "Add Swift gitignore"
