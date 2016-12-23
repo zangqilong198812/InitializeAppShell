@@ -15,8 +15,12 @@ showMenu() {
 	echo "2. 安装clang-format"
 	echo "3. 添加gitattributes防止pbxproj conflict"
 	echo "4. 安装gitflow"
-	echo "5. 安装commit hook自动规范代码（需要先安装clang-format）"
+	echo "5. 安装commit hook自动规范代码（需要先安装clang-format并且确保你的根目录有.git文件夹）"
 	echo "6. 安装chisel"
+	echo "7. 更改gem source源到ruby-china"
+	echo "8. 安装oh-my-zsh"
+	echo "9. 安装Cocoapods"
+	echo "10. 安装carthage"
 	echo "================================================================="
 	read -p "输入编号：" number
 
@@ -32,6 +36,14 @@ showMenu() {
 		5) installCommithook
 		;;
 		6) installChisel
+		;;
+		7) installGemSource
+		;; 
+		8) installOhMyZsh
+		;;
+		9) installCocoapods
+		;;
+		10) installCarthage
 		;;
 	esac
 }
@@ -89,6 +101,25 @@ installChisel() {
 	echo "command script import /path/to/fblldb.py" > ~/.lldbinit
 }
 
+installGemSource() {
+	gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+	gem sources -l
+}
+
+installOhMyZsh() {
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+}
+
+installCocoapods() {
+	sudo gem install cocoapods
+}
+
+installCarthage() {
+	brew update
+	brew install carthage
+}
+
+####################################################
 showMenu
 
 
