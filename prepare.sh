@@ -42,3 +42,5 @@ echo "下载pre-commit文件"
 curl https://gist.githubusercontent.com/zangqilong198812/20075e94ee2a070060465d1f9bb68ae6/raw/97ef6efa45de51d76697ae1de404493dfdc99d9d/gistfile1.txt > ../.git/hooks/pre-commit
 chmod a+x ../.git/hooks/pre-commit
 
+echo "设置gitattributes"
+echo "*.pbxproj merge=union" > ../.gitattributes
