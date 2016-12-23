@@ -57,22 +57,20 @@ installClangformat() {
 }
 
 installCommithook() {
-	echo "是否在每次提交commit的时候自动规范代码？[Y/N]:"
 	echo "下载pre-commit文件"
 	curl https://gist.githubusercontent.com/zangqilong198812/20075e94ee2a070060465d1f9bb68ae6/raw/97ef6efa45de51d76697ae1de404493dfdc99d9d/gistfile1.txt > ../.git/hooks/pre-commit
 	chmod a+x ../.git/hooks/pre-commit
 }
 
 installGitattributes() {
-	echo "是否增加gitattributes规则防止pbxproj conflict?[Y/N]:"
+	
 	echo "设置gitattributes"
 	echo "*.pbxproj merge=union" > ../.gitattributes
 }
 
 
 installGitflow() {
-	echo "是否安装git flow命令行？[Y/N]:"
-	read isAddGitFlow
+
 	echo "安装git flow"
 	if brew ls --versions git-flow-avh > /dev/null; then
 		echo "已经安装git flow"
@@ -81,6 +79,7 @@ installGitflow() {
 		brew install git-flow-avh
 	fi
 }
+
 
 showMenu
 
